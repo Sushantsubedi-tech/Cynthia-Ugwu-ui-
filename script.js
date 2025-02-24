@@ -78,16 +78,14 @@ gsap.from(text,{
     opacity:0,
     duration:0.9,
     delay:2.5,
-    stagger:0.5
+    stagger:1
 
 })
 gsap.from(text2,{
-  y:-1,
+  y:-5,
   opacity:0,
   duration:0.9,
-  delay:3,
-  stagger:0.5
-
+  delay:4,
 })
 }
 loadinganim();
@@ -122,7 +120,7 @@ container.forEach(function(item){
   item.addEventListener("mousemove",function(dets){
     console.log(item.childNodes[1],item.childNodes[3])
     item.childNodes[1].style.transform = 'translateX(5%) scale(0.99)';
-    item.childNodes[1].style.opacity = '0.3';;
+    item.childNodes[1].style.opacity = '0.3';
     item.childNodes[3].style.top = (dets.clientY - 175) + 'px';
     item.childNodes[3].style.left = dets.clientX - 150 + 'px';
     item.childNodes[3].style.opacity = '1';
@@ -130,6 +128,7 @@ container.forEach(function(item){
   item.addEventListener("mouseleave",function(){
    item.childNodes[3].style.opacity = '0';
    item.childNodes[1].style.transform = 'translateX(0%) scale(1)';
+   item.childNodes[1].style.opacity = '1';;
   })
 })
 
